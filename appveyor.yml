@@ -7,6 +7,7 @@ build_script:
         - qmake CONFIG+=static CONFIG+=qtquickcompiler -spec win32-g++ CONFIG+=release test.pro
         - mingw32-make
         - dir release
+        - windeployqt release/test.exe
 artifacts:
         - path: release/*
         - path: Makefile.Release
