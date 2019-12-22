@@ -7,5 +7,6 @@ build_script:
         - qmake test.pro
         - mingw32-make
         - dir release
+        - dir C:/Qt/5.13.2/mingw73_64/lib/
 artifacts:
         - path: release/test.exe
