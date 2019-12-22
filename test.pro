@@ -6,8 +6,9 @@ CONFIG += static
 CONFIG += staticlib
 DEFINES += STATIC
 
-QMAKE_LFLAGS = -static -static-libgcc 
 QMAKE_CFLAGS_RELEASE = -Os -momit-leaf-frame-pointer
+QMAKE_LFLAGS = -static -static-libgcc
+DEFINES += QT_STATIC_BUILD
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
