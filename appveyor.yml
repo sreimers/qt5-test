@@ -4,7 +4,7 @@ install:
         - set QTDIR=C:\Qt\5.13.2\mingw73_64
         - set PATH=%PATH%;%QTDIR%\bin;C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin
 build_script:
-        - qmake test.pro
+        - qmake CONFIG+=static test.pro
         - mingw32-make
         - dir release
         - dir C:\Qt\5.13.2\mingw73_64\lib\
