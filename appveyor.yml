@@ -6,7 +6,7 @@ install:
 build_script:
         - qmake CONFIG+=static test.pro
         - mingw32-make
-        - g++ -static -static-libgcc -Wl,-s -Wl,-subsystem,windows -mthreads -o release/test2.exe release/main.o release/qrc_qml.o -l mingw32
+        - g++ -static -static-libgcc -Wl,-s -Wl,-subsystem,windows -mthreads -o release/test2.exe release/main.o release/qrc_qml.o C:/Qt/5.13.2/mingw73_64/lib/libqtmain.a -l mingw32
         - dir release
 artifacts:
         - path: release/test.exe
