@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>rocket-solid.svg</file>
+        <file>logo_standalone.svg</file>
+        <file>Call.qml</file>
+        <file>CallForm.ui.qml</file>
+    </qresource>
+</RCC>
