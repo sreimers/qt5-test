@@ -6,4 +6,6 @@ install:
 build_script:
         - qmake test.pro
         - mingw32-make
-        - dir release 
+        - dir release
+artifacts:
+        - path: release/test.exe
