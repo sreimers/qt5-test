@@ -169,10 +169,10 @@ DEFINES += QT_STATIC_BUILD
     Pop-Location
 
     # Patch Qt's installed mkspecs for static build of application.
-    $File = "$QtDir\mkspecs\win32-g++\qmake.conf"
-    @"
-CONFIG += static
-"@ | Out-File -Append $File -Encoding Ascii
+    #$File = "$QtDir\mkspecs\win32-g++\qmake.conf"
+    #@"
+#CONFIG += static
+#"@ | Out-File -Append $File -Encoding Ascii
 
     Exit-Script
 }
