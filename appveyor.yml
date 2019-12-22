@@ -5,10 +5,8 @@ install:
         - set PATH=%PATH%;%QTDIR%\bin;C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin
 build_script:
         - powershell -File windows-build-qt-static.ps1 -QtVersion 5.13.2 -MingwDir C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64 
-        - md build
-        - cd build
-        - qmake CONFIG+=static CONFIG+=qtquickcompiler -spec win32-g++ CONFIG+=release "..\test.pro"
-        - mingw32-make
+          #        - qmake CONFIG+=static CONFIG+=qtquickcompiler -spec win32-g++ CONFIG+=release "..\test.pro"
+          #        - mingw32-make
+        - C:\Program Files\7-Zip\7z.exe a static.7z "C:\Qt\Static" 
 artifacts:
-        - path: build/release/*
-        - path: Makefile.Release
+        - path: static.7z
