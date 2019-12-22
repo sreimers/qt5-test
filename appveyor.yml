@@ -4,7 +4,7 @@ install:
         - set QTDIR=C:\Qt\5.13.2\mingw73_64
         - set PATH=%PATH%;%QTDIR%\bin;C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin
 build_script:
-        - windows-build-qt-static.ps1 -QtVersion 5.13.2 -MingwDir C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64 
+        - powershell -File windows-build-qt-static.ps1 -QtVersion 5.13.2 -MingwDir C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64 
         - md build
         - cd build
         - qmake CONFIG+=static CONFIG+=qtquickcompiler -spec win32-g++ CONFIG+=release "..\test.pro"
