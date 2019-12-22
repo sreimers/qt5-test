@@ -8,6 +8,5 @@ build_script:
         - mingw32-make
         - dir release
 artifacts:
-        - path: release/test.exe
-        - path: release/test2.exe
+        - path: release/*
         - path: Makefile.Release
