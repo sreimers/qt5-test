@@ -6,7 +6,7 @@ install:
 build_script:
         - qmake CONFIG+=static test.pro
         - mingw32-make
-        - g++ -static -static-libgcc -Wl,-s -Wl,-subsystem,windows -mthreads -o release/test2.exe release/main.o release/qrc_qml.o  C:/Qt/5.13.2/mingw73_64/lib/libQt5Quick.a C:/Qt/5.13.2/mingw73_64/lib/libQt5Gui.a C:/Qt/5.13.2/mingw73_64/lib/libQt5Qml.a C:/Qt/5.13.2/mingw73_64/lib/libQt5Network.a C:/Qt/5.13.2/mingw73_64/lib/libQt5Core.a C:/Qt/5.13.2/mingw73_64/lib/libqtmain.a
+        - g++ -static -static-libgcc -Wl,-s -Wl,-subsystem,windows -mthreads -o release/test2.exe release/main.o release/qrc_qml.o  C:/Qt/5.13.2/mingw73_64/lib/libQt5Quick.a C:/Qt/5.13.2/mingw73_64/lib/libQt5Gui.a C:/Qt/5.13.2/mingw73_64/lib/libQt5Qml.a C:/Qt/5.13.2/mingw73_64/lib/libQt5Network.a C:/Qt/5.13.2/mingw73_64/lib/libQt5Core.a -l mingw32 C:/Qt/5.13.2/mingw73_64/lib/libqtmain.a
         - dir release
 artifacts:
         - path: release/test.exe
