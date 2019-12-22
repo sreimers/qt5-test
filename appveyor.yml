@@ -4,7 +4,7 @@ install:
         - set QTDIR=C:\Qt\5.13.2\msvc2015_64
         - set PATH=%PATH%;%QTDIR%\bin;
 build_script:
-        - qmake CONFIG+=static CONFIG+=qtquickcompiler -spec win32-msvc CONFIG+=release test.pro
+        - qmake QMAKE_MSC_VER=2015 CONFIG+=static CONFIG+=qtquickcompiler -spec win32-msvc CONFIG+=release test.pro
         - msbuild test.vcxproj /p:Configuration=Release
 artifacts:
         - path: release/*
