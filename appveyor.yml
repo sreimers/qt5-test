@@ -1,13 +1,13 @@
 version: 1.0.{build}
 image: Visual Studio 2015
 install:
-        - set QTDIR=C:\Qt\5.13.2\msvc2015_64
-        - set PATH=%PATH%;%QTDIR%\bin;
+        - set QTDIR=QTDIR=C:\Qt\5.13.2\mingw73_64
+        - set PATH=%PATH%;%QTDIR%\bin;C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin
 build_script:
         - md build
         - cd build
-        - qmake CONFIG+=static CONFIG+=qtquickcompiler -spec win32-msvc CONFIG+=release "..\test.pro"
-        - msbuild test.vcxproj /p:Configuration=Release /p:Platform="x64" /p:VcpkgTriplet=x64-windows-static
+        - qmake CONFIG+=static CONFIG+=qtquickcompiler -spec win32-g++ CONFIG+=release "..\test.pro"
+        - mingw32-make
 artifacts:
         - path: build/release/*
         - path: Makefile.Release
