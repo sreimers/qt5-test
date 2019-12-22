@@ -1,7 +1,7 @@
 version: 1.0.{build}
 image: Visual Studio 2015
 install:
-        - set QTDIR=QTDIR=C:\Qt\5.13.2\mingw73_64
+        - set QTDIR=C:\Qt\5.13.2\mingw73_64
         - set PATH=%PATH%;%QTDIR%\bin;C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin
 build_script:
         - md build
